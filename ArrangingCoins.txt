@@ -16,3 +16,31 @@ Example 2:
 Input: n = 8
 Output: 3
 Explanation: Because the 4th row is incomplete, we return 3.
+
+######################################################################################
+
+another solution 
+
+start from 1 till <= n 
+
+if n < 0 break;
+
+complete row ++ every iteration;
+
+retun complet row;
+################ solution ####################
+class Solution {
+    public int arrangeCoins(int n) {
+        int completedRow = 0;
+        for(int i = 1; i <= n; i++) {
+            n -= i;
+            if(n < 0) {
+                break;
+            }
+            completedRow++;
+        }
+        return completedRow;
+    }
+}
+
+
