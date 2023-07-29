@@ -32,3 +32,21 @@ Example 3:
 
 Input: arr1 = [2,1,100,3], arr2 = [-5,-2,10,-3,7], d = 6
 Output: 1
+
+
+##############################################################################################################
+
+we need to check if (|nums[i] - nums[j] | <= d     ======>    change boolean variable stauts and break;
+then check if the staus of boolean variable not change increment the distance;
+ ############## NOTE ###############
+
+break statment terminate the inner loop;
+
+
+
+
+
+
+
+
+
