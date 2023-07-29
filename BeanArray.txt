@@ -8,3 +8,7 @@ either the value 6, 7 or 1 and none of these values are in the array.
 Write a function named isBean that returns 1 if it's array argument is a Bean array,
 otherwise it returns a 0.
 if you are programming in Java or C#, the function signature is int isBean(int[] a)
+
+########################################################################################################
+
+the boolean found used to cheak condition for every element because we can't use return statment inside if statment;
