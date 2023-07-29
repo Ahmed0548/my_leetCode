@@ -42,3 +42,9 @@ Then we delete them from the nums, so nums becomes equal to [13].
 nums has only one element, so we pick 13 and add it to the concatenation value, so it becomes equal to 673.
 Then we delete it from nums, so nums become empty.
 Since the concatenation value is 673 so the answer is 673.
+
+##############################################################################################################
+
+You need to add if statment for odd array length;
+it will add concatenatin value to the value of middle number
+nums = [5,14,13,8,12] ===>   concatenation value + 13;
