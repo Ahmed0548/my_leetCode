@@ -30,3 +30,19 @@ At index 3: The closest non-equal neighbors of 5 are 6 and 4. Since 5 < 6 and 5 
 At index 4: The closest non-equal neighbors of 4 are 5 and 1. Since 4 < 5 and 4 > 1, index 4 is neither a hill nor a valley.
 At index 5: There is no non-equal neighbor of 1 on the right, so index 5 is neither a hill nor a valley.
 There are 0 hills and valleys so we return 0.
+
+###########################################################################################################################
+
+we need to declare variable equal to nums[0] 
+this variable changed according to condition 
+if condition true will assaign nums[i] to variable so if there are adjacent numbers equal we will keep the value of variable;
+
+
+
+
+
+
+
+
+
+
