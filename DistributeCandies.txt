@@ -21,3 +21,9 @@ Example 3:
 Input: candyType = [6,6,6,6]
 Output: 1
 Explanation: Alice can only eat 4 / 2 = 2 candies. Even though she can eat 2 candies, she only has 1 type.
+
+
+###########################################################################################################################
+
+we need to check after sort if candyType[i] != candyType[i+1] =======> count++;
+if count > length return length otherwise return count;
