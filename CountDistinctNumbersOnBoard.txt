@@ -25,3 +25,10 @@ Output: 2
 Explanation: 
 Since 3 % 2 == 1, 2 will be added to the board. 
 After a billion days, the only two distinct numbers on the board are 2 and 3.
+
+#########################################################################################################
+
+
+for num n we n % n-1 == 1 so will return n-1;
+if n == 1 there is no number below so we need to check if n equal to one;
+return Math.max(n-1, 1);
