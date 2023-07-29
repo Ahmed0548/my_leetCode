@@ -18,3 +18,25 @@ Example 2:
 Input: nums = [2,-1,1]
 Output: 1
 Explanation: 1 and -1 are both the closest numbers to 0, so 1 being larger is returned.
+
+################################################################################################
+
+############################### solution #######################################################
+
+class Solution {
+    public int findClosestNumber(int[] nums) {
+        int dist = Integer.MAX_VALUE;
+        for(int num : nums) {
+            if(Math.abs(num) < Math.abs(dist)) {
+                dist = num;
+            }else if(Math.abs(num) == Math.abs(dist)) {
+                dist = Math.max(dist, num);
+            }
+        }
+        return dist;
+    }
+if both pos and neg are closest to zero will return the larger so we need to check if |num| == |dist| to return the max;
+
+
+
+
