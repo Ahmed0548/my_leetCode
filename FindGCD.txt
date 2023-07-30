@@ -28,3 +28,10 @@ Explanation:
 The smallest number in nums is 3.
 The largest number in nums is 3.
 The greatest common divisor of 3 and 3 is 3.
+
+#########################################################################################
+
+# sort array;
+# take small and large element in array;
+# start iterate from small till 2;
+if large % i == 0 && small % i == 0 return i otherwise return 1;
