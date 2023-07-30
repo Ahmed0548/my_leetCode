@@ -25,3 +25,13 @@ Example 3:
 Input: nums = [2,5]
 Output: -1
 Explanation: There is no valid middleIndex.
+
+###############################################################################################################
+
+first calculate sum;
+iterate from zero ;
+rigthSum = sum;
+leftSum = 0;
+rightsum - nums[i];
+if rightSum == leftSum =====> return i otherwise leftSum += nums[i];
+by the end return -1;
