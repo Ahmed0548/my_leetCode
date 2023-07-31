@@ -14,3 +14,25 @@ Example 2:
 Input: gain = [-4,-3,-2,-1,4,3,2]
 Output: 0
 Explanation: The altitudes are [0,-4,-7,-9,-10,-6,-3,-1]. The highest is 0.
+
+######################################### solution ########################################################
+
+class Solution {
+    public int largestAltitude(int[] gain) {
+        int sum = 0;
+        int max = 0;
+        for(int altitude : gain) {
+            sum += altitude;
+            if(max < sum) {
+                max = sum;
+            }
+        }
+        return max;
+    }
+}
+
+####################################################################################################################
+
+first sum the array;
+keep track of highest value by if(max < sum) max sum;
+by the end return max;
