@@ -14,11 +14,41 @@ Example 1:
 Input: n = 19
 Output: true
 Explanation:
-12 + 92 = 82
-82 + 22 = 68
-62 + 82 = 100
-12 + 02 + 02 = 1
+1^2 + 92 = 82
+8^2 + 22 = 68
+6^2 + 82 = 100
+1^2 + 02 + 02 = 1
 Example 2:
 
 Input: n = 2
 Output: false
+
+#############################################################################
+
+# first check if n < 10;
+&& if n == 1 || n == 7 return true otherwise return false;
+
+# while n > 0;
+digit = n % 10;
+result = digit * digit;
+sum += result;
+n /= 10;
+by the end return isHappy(sum);
+
+####################################### concept #################################
+
+isHappy(19); ==================> sum = 82;
+isHappy(82); ==================> sum = 68;
+isHappy(68); ==================> sum = 100;
+isHappy(100); ==================> sum = 1;
+n < 10 && n == 1   return true;
+############################################
+why if (n == 7) return true; because isHappy(7) will end with 1 and return true;
+
+
+
+
+
+
+
+
