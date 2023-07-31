@@ -21,7 +21,7 @@ class Solution {
 		int midIndex = nums.length/2;
 		int midItem = nums[midIndex];
 		for(int i = 0; i < nums.length; i++) {
-			if(i != midIndex && midItem >= nums[i]) {
+			if(nums[i] < midItem) {
 				return 0;
 			}
 			return 1;
