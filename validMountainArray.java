@@ -1,6 +1,6 @@
 class Solution {
     public boolean validMountainArray(int[] arr) {
-        if(arr.length <= 3) {
+        if(arr.length <3) {
             return false;
         }
         int start = 0; 
