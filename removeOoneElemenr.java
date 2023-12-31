@@ -10,3 +10,18 @@ class Solution {
         return count <= 1;
     }
 }
+
+####################################################
+another 
+public boolean canBeIncreasing(int [] num) {
+        int count = 0;
+        for(int i = 1; i < num.length; i++) {
+            if(num[i-1] >= num[i]) {
+                count++;
+            }
+            if(count == 2) {
+                return false;
+            }
+        }
+        return true;
+}
