@@ -1,3 +1,22 @@
+// ################### frst solution ################### //
+class Solution {
+    public int poe(int[] nums) {
+int rightSum = 0;
+        int leftSum = 0;
+        for(int i =0; i < arr.length; i++) {
+            rightSum += arr[i];
+        }
+        for(int i =0; i < arr.length; i++) {
+            rightSum -= arr[i];
+            if(leftSum == rightSum) {
+                return i;
+            }
+            leftSum += arr[i];
+        }
+        return -1;
+    }
+}
+// ################### second solution ################### //
 class Solution {
     public int poe(int[] nums) {
         int sum = 0;
