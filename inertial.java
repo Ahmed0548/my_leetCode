@@ -1,25 +1,38 @@
 class Solution {
-    public static boolean isInertial(int[] arr) {
-        int max = Integer.MIN_VALUE;
+static int isInertial(int[] arr) {
+       if(arr == null || arr.length == 0) {
+           return 0;
+       }
+       int max = arr[0];
+       boolean maxIsEven = false;
+       for(int x: arr) {
+           if(x > max) {
+               max = x;
+               maxIsEven = (x % 2 == 0);
+           }
+       }
+       if(!maxIsEven) {
+            return 0;
+        }
         boolean hasOdd = false;
-        boolean hasEven = false;
-        boolean result = true;
-        for(int i = 0; i < arr.length; i++) {
-            if(arr[i] % 2 == 1) {
+        for(int x: arr) {
+            if(x % 2 != 0) {
                 hasOdd = true;
-                if(arr[i] <= max && arr[i] != arr[arr.length -1]) {
-                    result = false;
-                }
-            }else{
-                hasEven = true;
-                if(arr[i] > max) {
-                    max = arr[i];
-                }
-            }
-            if(!hasOdd ||(!hasEven && arr[arr.length - 1] % 2 == 0)) {
-                result = false;
+                break;
             }
         }
-        return result;
+        if(!hasOdd) {
+            return 0;
+        }
+        for(int x: arr) {
+            if(x % 2 != 0) {
+                for(int y: arr) {
+                    if(y % 2 == 0 && y != max && x <= y) {
+                        return 0;
+                    }
+                }
+            }
+        }
+        return 1;
     }
-}
+} 
