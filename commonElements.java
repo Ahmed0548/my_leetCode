@@ -1,22 +1,18 @@
-public static int[] commonElements(int[] arr1, int[] arr2) {
-    int[] result = new int[Math.min(arr1.length, arr2.length)];
-    int count = 0;
-    for (int i = 0; i < arr1.length; i++) {
-        for (int j = 0; j < arr2.length; j++) {
-            if (arr1[i] == arr2[j]) {
-                boolean alreadyAdded = false;
-                for (int k = 0; k < count; k++) {
-                    if (result[k] == arr1[i]) {
-                        alreadyAdded = true;
-                        break;
+static int[] f(int[] first, int[] second) {
+        int[] common = new int [0];
+        for(int num1: first) {
+            for(int num2: second) {
+                if(num1 == num2) {
+                    int[] newArray = new int [common.length+1];
+                    for(int i = 0; i < common.length; i++) {
+                        newArray[i] = common[i];
                     }
+                    newArray[common.length] = num1;
+                    common = newArray;
+                    break;
                 }
-                if (!alreadyAdded) {
-                    result[count++] = arr1[i];
-                }
-                break;
             }
         }
-    }
-    return Arrays.copyOf(result, count);
-} 
+        return common;
+}
+
