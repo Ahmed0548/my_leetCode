@@ -10,3 +10,16 @@ class Solution {
     }
    
 }
+
+#########################################################################
+
+class Solution {
+    public int mySqrt(int x) {
+    for(int i = x-1; i > 0; i--) {
+                if(i * i <= x) {
+                    return i;
+                }
+            }
+            return -1;
+    }
+}
